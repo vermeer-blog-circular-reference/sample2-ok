@@ -17,12 +17,13 @@
 package org.vermeer1977.sample.circular_reference.caller;
 
 import org.vermeer1977.sample.circular_reference.callee.Callee;
+import org.vermeer1977.sample.circular_reference.callee.CalleeInterface;
 
 /**
  *
  * @author Yamashita,Takahiro
  */
-public class Caller {
+public class Caller implements CalleeInterface {
 
     private final String info;
 
@@ -30,6 +31,7 @@ public class Caller {
         this.info = "Callerの情報";
     }
 
+    @Override
     public String getInfo() {
         return this.info;
     }

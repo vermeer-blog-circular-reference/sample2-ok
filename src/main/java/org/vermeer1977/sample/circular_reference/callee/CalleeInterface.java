@@ -20,15 +20,7 @@ package org.vermeer1977.sample.circular_reference.callee;
  *
  * @author Yamashita,Takahiro
  */
-public class Callee {
+public interface CalleeInterface {
 
-    private final CalleeInterface caller;
-
-    public Callee(CalleeInterface caller) {
-        this.caller = caller;
-    }
-
-    public void exec() {
-        System.out.println(this.caller.getInfo());
-    }
+    public String getInfo();
 }
